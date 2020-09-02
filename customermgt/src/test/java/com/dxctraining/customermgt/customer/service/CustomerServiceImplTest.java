@@ -19,7 +19,6 @@ import com.dxctraining.customermgt.customer.entities.Customer;
 import com.dxctraining.customermgt.exception.CustomerNotFoundException;
 import com.dxctraining.customermgt.exception.InvalidArgumentException;
 
-import junit.framework.Assert;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
