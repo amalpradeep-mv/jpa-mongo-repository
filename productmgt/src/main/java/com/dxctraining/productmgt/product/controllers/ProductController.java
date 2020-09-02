@@ -68,7 +68,7 @@ public class ProductController {
 	}
 
 	public CustomerDto fetchProductsFromCustomer(Integer customerId) {
-		String url = "http://localhost:8585/customers/get/" + customerId;
+		String url = "http://customermgt/customers/get/" + customerId;
 		CustomerDto dto = rest.getForObject(url, CustomerDto.class);
 		return dto;
 	}

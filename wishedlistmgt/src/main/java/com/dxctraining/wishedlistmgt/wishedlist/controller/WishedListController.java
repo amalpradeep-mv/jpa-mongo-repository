@@ -74,13 +74,13 @@ public class WishedListController {
 
 	
 	public ProductDto fetchWishedListsFromProduct(String productId) {
-		String url = "http://localhost:8686/products/get/" + productId;
+		String url = "http://productmgt/products/get/" + productId;
 		ProductDto dto = rest.getForObject(url, ProductDto.class);
 		return dto;
 	}
 	
 	public CustomerDto fetchWishedListsFromCustomer(Integer customerId) {
-		String url="http://localhost:8585/customers/get/"+customerId;
+		String url="http://customermgt/customers/get/"+customerId;
 		CustomerDto dto=rest.getForObject(url,CustomerDto.class);
 		return dto;
 	}
