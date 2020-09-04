@@ -1,4 +1,4 @@
-package com.dxctraining.wishedlistmgt.wishedlist.dto;
+package com.dxctraining.wisheditemmgt.wisheditem.dto;
 
 public class CustomerDto {
 

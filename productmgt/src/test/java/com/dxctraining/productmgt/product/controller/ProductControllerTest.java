@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,9 +15,8 @@ import com.dxctraining.productmgt.product.controllers.ProductController;
 import com.dxctraining.productmgt.product.dto.ProductDto;
 import com.dxctraining.productmgt.product.entities.Product;
 
-@DataMongoTest
+@SpringBootTest
 @Import({ ProductController.class })
-@Transactional
 public class ProductControllerTest {
 
 	@Autowired
@@ -26,14 +26,14 @@ public class ProductControllerTest {
 	private MongoTemplate mongo;
 
 	@Test
-	public void testGetCustomerById_1() {
+	public void testGetProductById_1() {
 		Executable execute = () -> controller.getProduct(null);
 		Assertions.assertThrows(ProductNotFoundException.class, execute);
 	}
 
 	@Test
-	public void testGetCustomerById_2() {
-		Product customer = new Product("John",1);
+	public void testGetProductById_2() {
+		Product customer = new Product("John");
 		customer = mongo.save(customer);
 		String id = customer.getId();
 		ProductDto result = controller.getProduct(id);

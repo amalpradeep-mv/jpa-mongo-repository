@@ -56,13 +56,4 @@ public class ProductServiceMongoImpl implements IProductService {
 		}
 	}
 
-	@Override
-	public List<Product> allProductsFromCustomer(Integer customerId){
-		Criteria criteria=Criteria.where("customerId").is(customerId);
-		Query query=Query.query(criteria);
-		List<Product>list=mongo.find(query, Product.class);
-		return list;
-		
-	}
-
 }

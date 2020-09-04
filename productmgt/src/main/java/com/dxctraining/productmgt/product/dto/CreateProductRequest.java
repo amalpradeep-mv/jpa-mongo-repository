@@ -4,22 +4,11 @@ public class CreateProductRequest {
 
 	private String name;
 
-	public Integer customerId;
-
 	public CreateProductRequest() {
 	}
 
-	public CreateProductRequest(String name, Integer customerId) {
+	public CreateProductRequest(String name) {
 		this.name = name;
-		this.customerId = customerId;
-	}
-
-	public Integer getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
 	}
 
 	public String getName() {

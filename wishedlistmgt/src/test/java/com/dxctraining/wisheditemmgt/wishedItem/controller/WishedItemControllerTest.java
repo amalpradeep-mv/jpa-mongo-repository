@@ -1,4 +1,4 @@
-package com.dxctraining.wishedlistmgt.wishedList.controller;
+package com.dxctraining.wisheditemmgt.wishedItem.controller;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,22 +10,22 @@ import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.dxctraining.wishedlistmgt.exception.WishedListNotFoundException;
-import com.dxctraining.wishedlistmgt.wishedlist.controller.WishedListController;
+import com.dxctraining.wisheditemmgt.exception.WishedItemNotFoundException;
+import com.dxctraining.wisheditemmgt.wisheditem.controller.WishedItemController;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
-@Import({WishedListController.class})
+@Import({WishedItemController.class})
 @Transactional
-public class WishedListControllerTest {
+public class WishedItemControllerTest {
 
 	@Autowired
-	private WishedListController controller;
+	private WishedItemController controller;
 
 	@Test
-	public void testGetWishedListById_1() {
-		Executable execute = () -> controller.getWishedList("45");
-		Assertions.assertThrows(WishedListNotFoundException.class, execute);
+	public void testGetWishedItemById_1() {
+		Executable execute = () -> controller.getWishedItem("45");
+		Assertions.assertThrows(WishedItemNotFoundException.class, execute);
 	}
 	
 }

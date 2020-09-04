@@ -1,4 +1,4 @@
-package com.dxctraining.wishedlistmgt.wishedlist.entities;
+package com.dxctraining.wisheditemmgt.wisheditem.entities;
 
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Table(name="wishedlist_details")
-public class WishedList {
+public class WishedItem {
 
 	@Id
 	@GeneratedValue(generator = "uuid")
@@ -25,9 +25,9 @@ public class WishedList {
 	
 	private Integer customerId;
 	
-	public WishedList() {}
+	public WishedItem() {}
 	
-	public WishedList(String name,String productId, Integer customerId) {
+	public WishedItem(String name,String productId, Integer customerId) {
 		this.name=name;
 		this.productId=productId;
 		this.customerId=customerId;
@@ -70,7 +70,7 @@ public class WishedList {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		WishedList other = (WishedList) obj;
+		WishedItem other = (WishedItem) obj;
 		return Objects.equals(id, other.id);
 	}
 

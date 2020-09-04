@@ -13,14 +13,11 @@ public class Product {
 	
 	private String name;
 	
-	private Integer customerId;
-
 	public Product() {
 	}
 
-	public Product(String name, Integer customerId) {
+	public Product(String name) {
 		this.name = name;
-		this.setCustomerId(customerId);
 	}
 
 	public String getId() {
@@ -54,13 +51,5 @@ public class Product {
 		}
 		Product that = (Product) obj;
 		return this.id.equals(that.id);
-	}
-
-	public Integer getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
 	}
 }

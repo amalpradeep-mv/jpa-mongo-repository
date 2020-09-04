@@ -50,7 +50,7 @@ public class CustomerController {
 	
 
 	@GetMapping("/allcustomers")
-	@ResponseStatus(HttpStatus.CREATED)
+	@ResponseStatus(HttpStatus.OK)
 	public List<CustomerDto> fetchAll() {
 		List<Customer> list = customerService.findAll();
 		List<CustomerDto> response = new ArrayList<>();

@@ -8,10 +8,8 @@ import com.dxctraining.productmgt.product.entities.Product;
 @Component
 public class ProductUtil {
 
-	public ProductDto productDto(Product product, Integer customerId, String customerName) {
+	public ProductDto productDto(Product product) {
 		ProductDto dto = new ProductDto(product.getId(), product.getName());
-		dto.setCustomerId(customerId);
-		dto.setCustomerName(customerName);
 		return dto;
 	}
 }

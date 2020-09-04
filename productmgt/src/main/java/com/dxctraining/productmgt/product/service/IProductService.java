@@ -16,6 +16,4 @@ public interface IProductService {
 	
 	void remove(String id);
 
-	List<Product> allProductsFromCustomer(Integer customerId);
-
 }

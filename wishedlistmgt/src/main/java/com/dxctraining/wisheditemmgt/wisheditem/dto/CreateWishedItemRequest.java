@@ -1,6 +1,6 @@
-package com.dxctraining.wishedlistmgt.wishedlist.dto;
+package com.dxctraining.wisheditemmgt.wisheditem.dto;
 
-public class CreateWishedListRequest {
+public class CreateWishedItemRequest {
 
 	private String name;
 
@@ -9,10 +9,10 @@ public class CreateWishedListRequest {
 	private Integer customerId;
 	
 
-	public CreateWishedListRequest() {
+	public CreateWishedItemRequest() {
 	}
 
-	public CreateWishedListRequest(String name, String productId, Integer custoemrId) {
+	public CreateWishedItemRequest(String name, String productId, Integer custoemrId) {
 		this.name = name;
 		this.productId =productId;
 		this.customerId=custoemrId;

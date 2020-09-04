@@ -1,4 +1,4 @@
-package com.dxctraining.wishedlistmgt;
+package com.dxctraining.wisheditemmgt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

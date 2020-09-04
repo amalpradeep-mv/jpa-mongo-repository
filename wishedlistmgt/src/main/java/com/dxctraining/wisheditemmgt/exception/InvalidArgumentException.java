@@ -1,4 +1,4 @@
-package com.dxctraining.wishedlistmgt.exception;
+package com.dxctraining.wisheditemmgt.exception;
 
 public class InvalidArgumentException extends RuntimeException {
 

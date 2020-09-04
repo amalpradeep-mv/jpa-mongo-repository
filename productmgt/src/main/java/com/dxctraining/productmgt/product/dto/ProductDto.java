@@ -5,10 +5,6 @@ public class ProductDto {
 	private String id;
 
 	private String name;
-
-	private Integer customerId;
-	
-	private String customerName;
 	
 	public ProductDto() {}
 	
@@ -33,19 +29,4 @@ public class ProductDto {
 		this.name = name;
 	}
 
-	public Integer getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Integer customerId) {
-		this.customerId = customerId;
-	}
-
-	public String getCustomerName() {
-		return customerName;
-	}
-
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
 }

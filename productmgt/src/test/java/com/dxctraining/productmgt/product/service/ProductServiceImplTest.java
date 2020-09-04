@@ -31,11 +31,11 @@ public class ProductServiceImplTest {
 	@Test
 	public void testAdd_2() {
 		String name = "Krish";
-		Product customer = new Product(name,1);
-		customer = service.save(customer);
-		String id=customer.getId();
+		Product product = new Product(name);
+		product = service.save(product);
+		String id=product.getId();
 		Product fetched=mongo.findById(id, Product.class);
-		Assertions.assertEquals(customer.getId(), fetched.getId());
+		Assertions.assertEquals(product.getId(), fetched.getId());
 		Assertions.assertEquals(name, fetched.getName());
 	}
 
@@ -47,11 +47,11 @@ public class ProductServiceImplTest {
 
 	@Test
 	public void testFindById_2() {
-		Product customer = new Product("Raj",2);
-		customer = mongo.save(customer);
-		String id = customer.getId();
+		Product product = new Product("Raj");
+		product = mongo.save(product);
+		String id = product.getId();
 		Product result = service.findById(id);
 		Assertions.assertEquals(id, result.getId());
-		Assertions.assertEquals(customer.getName(), result.getName());
+		Assertions.assertEquals(product.getName(), result.getName());
 	}
 }

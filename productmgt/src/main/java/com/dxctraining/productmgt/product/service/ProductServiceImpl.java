@@ -51,10 +51,4 @@ public class ProductServiceImpl implements IProductService {
 		dao.deleteById(id);
 	}
 
-	@Override
-	public List<Product> allProductsFromCustomer(Integer customerId) {
-		List<Product> list = dao.allProductsFromCustomer(customerId);
-		return list;
-	}
-
 }

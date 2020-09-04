@@ -1,6 +1,6 @@
-package com.dxctraining.wishedlistmgt.wishedlist.dto;
+package com.dxctraining.wisheditemmgt.wisheditem.dto;
 
-public class WishedListDto {
+public class WishedItemDto {
 
 	private String id;
 
@@ -15,9 +15,9 @@ public class WishedListDto {
 	private String customerName;
 
 
-	public WishedListDto() {}
+	public WishedItemDto() {}
 	
-	public WishedListDto(String id, String name) {
+	public WishedItemDto(String id, String name) {
 		this.id=id;
 		this.name=name;
 	}
